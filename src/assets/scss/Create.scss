@@ -1,0 +1,64 @@
+@import './Main.scss';
+
+.create{
+    height: 100vh;
+    background: var(--backgroundColor);
+    display: flex;
+    justify-content: center;
+
+    .create-form{
+        margin-top: 8rem;
+        width: 30%;
+
+        h2{
+            color: white;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        div{
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+
+            input ,textarea{
+                width: 100%;
+                padding: 0.7rem 0.9rem;
+                border-radius: 3rem;
+                outline: none;
+                border: 1px solid gray;
+            }
+        }
+
+        .btn{
+            display: flex;
+            justify-content: right;
+        }
+
+        button{
+            margin-top: 1rem;
+            width: 30%;
+            padding: 0.7rem 0.5rem;
+            @include button-styles;
+        }
+    }
+
+}
+
+@media (max-width: 480px) {
+    .create .create-form{
+        width: 80%;
+        margin-top: 1rem;
+
+        div{
+            margin: 10px 0;
+        }
+
+        .btn{
+            justify-content: center;
+        }
+    }
+} 
+
+
+

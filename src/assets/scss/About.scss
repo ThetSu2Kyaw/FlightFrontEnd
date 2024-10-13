@@ -1,0 +1,16 @@
+@import './Main.scss';
+
+/* about */
+.about{
+    padding: 4.5rem 0;
+    height: 100vh;
+    background: var(--secondayColor);
+}
+.about-text{
+    margin: 2rem 0;
+}
+.about-text > p{
+    font-size: 1.1rem;
+    padding: 0.6rem 0;
+    opacity: 0.8;
+}

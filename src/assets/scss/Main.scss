@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@mixin setTheme($clientName) {
+    --primaryColor: var(--#{$clientName}PrimaryColor);
+    --secondaryColor: var(--#{$clientName}SecondaryColor);
+    --backgroundColor: var(--#{$clientName}BackgroundColor);
+}
+
+:root{
+    --Playfair: 'Playfair Display', serif;
+    --Quicksand: 'Quicksand', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+
+    --grabPrimaryColor: #00b14f;
+    --grabSecondaryColor: #005339;
+    --grabBackgroundColor: #D3F035;
+
+    --uabPrimaryColor: #38B449;
+    --uabSecondaryColor: #927EBA;
+    --uabBackgroundColor: #0054A6;
+
+    --momoneyPrimaryColor: #4cb849;
+    --momoneySecondaryColor: #4cb849;
+    --momoneyBackgroundColor: #fe5353;
+
+    --defaultPrimaryColor: #2b2b2b;
+    --defaultSecondaryColor: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    --defaultBackgroundColor: #f9f9f9;
+
+    // --primaryColor: var(--grabPrimaryColor);
+    // --secondaryColor: var(--grabSecondaryColor);
+    // --backgroundColor: var(--grabBackgroundColor);
+
+    @include setTheme('grab');
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--Quicksand);
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.4;
+    color: var(--dark);
+}
+
+@mixin button-styles {
+    font-weight: bold; 
+    font-size: 16px; 
+    border: 1px solid gray; 
+    text-transform: uppercase; 
+    cursor: pointer; 
+    border-radius: 2rem;
+}
+
